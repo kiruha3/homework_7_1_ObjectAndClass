@@ -1,3 +1,5 @@
+package homework_7_1_ObjectAndClass;
+
 public class Author {
     private String name;
     private String surname;

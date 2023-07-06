@@ -1,3 +1,8 @@
+package homework_7_1_ObjectAndClass;
+
+import homework_7_1_ObjectAndClass.Author;
+import homework_7_1_ObjectAndClass.Book;
+
 public class Main {
     public static void main(String[] args) {
         Author pushkin = new Author("Александр", "Пушкин");

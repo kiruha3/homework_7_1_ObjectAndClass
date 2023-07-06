@@ -1,3 +1,7 @@
+package homework_7_1_ObjectAndClass;
+
+import homework_7_1_ObjectAndClass.Author;
+
 public class Book {
     private String title;
     private Author author;
