@@ -20,12 +20,10 @@ public class Main {
         enterBook(happyPotter);
     }
     public static void enterBook(Book book){
-        System.out.printf("Название книги: %s %n" +
-                        "Автор: Имя: %s Фамилия: " +
-                        "%s%nГод выпуска: %s%n-------------------------%n",
+        //AuthorService authorService = new AuthorService();
+        System.out.printf("Название книги: %s%n%s%nГод выпуска: %s%n-------------------------%n",
                 book.getTitle(),
-                book.getAuthor().getName(),
-                book.getAuthor().getSurname(),
-                book.getYear() );
+                book.getAuthor().toString(),
+                book.getYear());
     }
 }
