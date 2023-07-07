@@ -17,9 +17,18 @@ public class Author {
         return this.surname;
     }
 
+    @Override
     public String toString() {
         return "Автор: Имя: " + getName() + "Фамилия: " + getSurname() + " ";
 
+    }
+    @Override
+    public boolean equals(Object object) {
+        if (this.getClass() != object.getClass()) {
+            return false;
+        }
+        Author name2 = (Author) object;
+        return name.equals(name2.name);
     }
 
 }

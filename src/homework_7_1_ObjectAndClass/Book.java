@@ -28,8 +28,19 @@ public class Book {
     public void setYear(int year) {
         this.year = year;
     }
+
+    @Override
     public String toString() {
         return "Название книги: " + getTitle() + " " + getAuthor() + " " + "Год выпуска: " + getYear();
 
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this.getClass() != object.getClass()) {
+            return false;
+        }
+        Book book = (Book) object;
+        return title.equals(book.title) && author.equals(book.author);
     }
 }
