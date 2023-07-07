@@ -1,5 +1,3 @@
-package homework_7_1_ObjectAndClass;
-
 import homework_7_1_ObjectAndClass.Author;
 import homework_7_1_ObjectAndClass.Book;
 
