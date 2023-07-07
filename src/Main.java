@@ -16,6 +16,5 @@ public class Main {
 
         happyPotter.setYear(2021);
         System.out.println(happyPotter.toString());
-
     }
 }
