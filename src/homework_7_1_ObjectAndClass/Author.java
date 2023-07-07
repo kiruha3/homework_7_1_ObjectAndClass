@@ -30,5 +30,9 @@ public class Author {
         Author name2 = (Author) object;
         return name.equals(name2.name);
     }
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(name +" "+ surname);
+    }
 
 }
