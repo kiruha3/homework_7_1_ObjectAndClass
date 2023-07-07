@@ -12,18 +12,11 @@ public class Main {
         Book greenMile = new Book("Зеленая миля", stivenKing, 2014);
         Book aboutking = new Book("Сказка о царе Салтане", pushkin, 1831);
 
-        enterBook(happyPotter);
-        enterBook(greenMile);
-        enterBook(aboutking);
+        System.out.println(happyPotter.toString());
+        System.out.println(greenMile.toString());
+        System.out.println(aboutking.toString());
 
         happyPotter.setYear(2021);
-        enterBook(happyPotter);
-    }
-    public static void enterBook(Book book){
-        //AuthorService authorService = new AuthorService();
-        System.out.printf("Название книги: %s%n%s%nГод выпуска: %s%n-------------------------%n",
-                book.getTitle(),
-                book.getAuthor().toString(),
-                book.getYear());
+        System.out.println(happyPotter.toString());
     }
 }

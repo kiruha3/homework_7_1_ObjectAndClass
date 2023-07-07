@@ -13,11 +13,13 @@ public class Author {
         return this.name;
     }
 
-    public String getSurname(){
-        return  this.surname;
+    public String getSurname() {
+        return this.surname;
     }
+
     public String toString() {
-        return "Автор: Имя: " + getName() + "Фамилия: " + getSurname();
+        return "Автор: Имя: " + getName() + "Фамилия: " + getSurname() + " ";
+
     }
 
 }
