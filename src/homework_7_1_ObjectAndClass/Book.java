@@ -2,6 +2,8 @@ package homework_7_1_ObjectAndClass;
 
 import homework_7_1_ObjectAndClass.Author;
 
+import java.util.Objects;
+
 public class Book {
     private String title;
     private Author author;
@@ -36,16 +38,15 @@ public class Book {
     }
 
     @Override
-    public boolean equals(Object object) {
-        if (this.getClass() != object.getClass()) {
-            return false;
-        }
-        Book book = (Book) object;
-        return title.equals(book.title) && author.equals(book.author);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return year == book.year && Objects.equals(title, book.title) && Objects.equals(author, book.author);
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(title +" "+ author);
+        return Objects.hash(title, author, year);
     }
 }

@@ -1,5 +1,7 @@
 package homework_7_1_ObjectAndClass;
 
+import java.util.Objects;
+
 public class Author {
     private String name;
     private String surname;
@@ -22,17 +24,19 @@ public class Author {
         return "Автор: Имя: " + getName() + "Фамилия: " + getSurname() + " ";
 
     }
+
     @Override
-    public boolean equals(Object object) {
-        if (this.getClass() != object.getClass()) {
-            return false;
-        }
-        Author name2 = (Author) object;
-        return name.equals(name2.name);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Objects.equals(name, author.name) && Objects.equals(surname, author.surname);
     }
+
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(name +" "+ surname);
+        return Objects.hash(name, surname);
     }
+
 
 }
